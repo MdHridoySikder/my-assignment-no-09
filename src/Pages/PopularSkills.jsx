@@ -9,18 +9,18 @@ const PopularSkills = ({ data }) => {
   const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
   return (
-    <div className="rounded-xl overflow-hidden hover:shadow-xl duration-300 flex flex-col border border-gray-200">
+    <div className="rounded-xl overflow-hidden hover:shadow-xl duration-300 flex flex-col border border-gray-200 ">
       <img src={image} alt={skillName} className="w-full h-48 object-cover" />
 
       {/* Card Body */}
-      <div className="p-5 flex flex-col justify-between flex-1">
+      <div className="p-5 flex flex-col justify-between flex-1 ">
         <div>
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
             {skillName}
           </h3>
 
           {/* Rating */}
-          <div className="flex items-center mb-2">
+          <div className="flex items-center mb-2 ">
             <div className="flex text-yellow-400 text-lg">
               {Array(fullStars)
                 .fill()

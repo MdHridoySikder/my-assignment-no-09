@@ -73,16 +73,19 @@ const Signin = () => {
   };
 
   return (
-    <div className="hero min-h-screen bg-blue-50">
-      <div className="hero-content flex-col">
+    <div className="hero min-h-screen bg-blue-50 ">
+      <div className="hero-content flex-col ">
         <h1 className="text-3xl font-bold text-fuchsia-900 mb-4">Login</h1>
 
-        <div className="card bg-base-100 w-full max-w-sm shadow-2xl">
+        <div
+          className="card bg-base-100 w-full max-w-sm shadow-2xl hover:bg-purple-50 hover:shadow-[0_10px_30px_rgba(168,85,247,0.25)]
+"
+        >
           <div className="card-body bg-fuchsia-100">
             {user ? (
               <Profile user={user} setUser={setUser} />
             ) : (
-              <form onSubmit={handleSignin}>
+              <form className="" onSubmit={handleSignin}>
                 <label className="label">Email</label>
                 <input
                   type="email"

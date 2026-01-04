@@ -4,6 +4,9 @@ import { AuthContext } from "../Context/AuthContext";
 import { auth } from "../Firebase/Firebase.config";
 import { signOut } from "firebase/auth";
 import { toast } from "react-toastify";
+import { RiLogoutCircleLine } from "react-icons/ri";
+import { HiLogin } from "react-icons/hi";
+import { IoMdLogIn } from "react-icons/io";
 
 const Navbar = () => {
   const { user, setUser } = useContext(AuthContext);
@@ -63,8 +66,8 @@ const Navbar = () => {
         {/* Logo */}
         <a href="/" className="flex items-center gap-1 ml-4">
           <img src="/logo.png" alt="Logo" className="w-12 h-12 rounded-full" />
-          <h3 className="font-bold tracking-wide text-[#632EE3] ">
-            SkillS<span className="text-black">Swap</span>
+          <h3 className="font-bold tracking-wide text-pink-500 ">
+            SkillS<span className="text-purple-600">Swap</span>
           </h3>
         </a>
       </div>
@@ -76,7 +79,7 @@ const Navbar = () => {
             <NavLink
               to="/home"
               className={({ isActive }) =>
-                isActive ? "font-semibold text-red-700" : "text-blue-300"
+                isActive ? "font-semibold text-pink-500" : "from-purple-600"
               }
             >
               Home
@@ -86,7 +89,7 @@ const Navbar = () => {
             <NavLink
               to="/toprated"
               className={({ isActive }) =>
-                isActive ? "font-semibold text-red-700" : "text-blue-300"
+                isActive ? "font-semibold text-pink-500" : "from-purple-600 "
               }
             >
               TopRated
@@ -98,7 +101,7 @@ const Navbar = () => {
               <NavLink
                 to="/profile"
                 className={({ isActive }) =>
-                  isActive ? "font-semibold text-red-700" : "text-blue-300"
+                  isActive ? "font-semibold text-pink-500" : "from-purple-600"
                 }
               >
                 My Profile
@@ -113,18 +116,20 @@ const Navbar = () => {
         {!user ? (
           <NavLink
             to="/signin"
-            className="btn btn-sm bg-gradient-to-r from-purple-600 to-pink-500 mr-10"
+            className="btn btn-sm bg-gradient-to-r from-purple-600 to-pink-500 mr-10 font-semibold "
           >
             Login
+            <RiLogoutCircleLine className="text-xl" />
           </NavLink>
         ) : (
           <div className="flex items-center gap-2">
             {/* Logout Button */}
             <button
               onClick={handleLogout}
-              className="btn btn-sm bg-gradient-to-r from-purple-600 to-pink-500"
+              className="btn btn-sm bg-gradient-to-r from-purple-600 to-pink-500 font-semibold"
             >
               Logout
+              <IoMdLogIn className="text-xl" />
             </button>
 
             {/* User Photo with Hover Name */}

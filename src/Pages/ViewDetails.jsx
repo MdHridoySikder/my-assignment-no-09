@@ -33,7 +33,9 @@ const ViewDetails = () => {
 
         {/* Details */}
         <div>
-          <h2 className="text-2xl font-bold mb-2">{skill.skillName}</h2>
+          <h2 className="text-2xl font-bold mb-2 text-purple-600">
+            {skill.skillName}
+          </h2>
           <p className="text-gray-600 mb-2">{skill.description}</p>
 
           <ul className="text-sm text-gray-700 space-y-1 mb-4">

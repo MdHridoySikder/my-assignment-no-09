@@ -55,9 +55,10 @@ const Profile = () => {
           <img
             src={user.photoURL || "https://i.ibb.co/2kR9y6F/user.png"}
             alt="profile"
-            className="w-28 h-28 rounded-full border-4 border-gradient-to-r from-purple-600 to-pink-500 shadow-lg object-cover"
+            className="w-28 h-28 rounded-full border-4 border-purple-600 shadow-lg object-cover"
           />
-          <span className="absolute -bottom-2 right-0 bg-pink-500 w-5 h-5 rounded-full border-2 border-white animate-pulse"></span>
+
+          <span className="absolute -bottom-2 right-0 bg-green-600 w-5 h-5 rounded-full border-2 border-white animate-pulse"></span>
         </div>
 
         {/* Name & Email */}
@@ -67,7 +68,7 @@ const Profile = () => {
         <p className="text-gray-500">{user.email}</p>
 
         <p className="mt-3 text-sm text-gray-600">
-          Welcome back! 🎉 Manage your profile below.
+          Welcome back! Manage your profile below.
         </p>
 
         {/* Update Button */}
@@ -81,7 +82,7 @@ const Profile = () => {
 
       {/* Modal */}
       {showModal && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 px-4">
+        <div className="fixed inset-0 bg-fuchsia-50 bg-opacity-50 flex justify-center items-center z-50 px-4">
           <div className="bg-white w-full max-w-md rounded-2xl p-8 relative shadow-2xl">
             <h2 className="text-xl font-semibold mb-6 text-gray-800">
               Update Profile

@@ -71,6 +71,7 @@ const router = createBrowserRouter([
           </h1>
         ),
       },
+
       {
         path: "/details/:id",
         element: (

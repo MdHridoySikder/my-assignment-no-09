@@ -4,17 +4,16 @@ const Footer = () => {
   return (
     <footer className="footer sm:footer-horizontal bg-[#001931] text-white text-base-content p-10">
       {/* LEFT : Logo + Brand */}
-      <aside className="flex items-center gap-2">
+      <aside className="flex items-center gap-2 ">
         <img
           src="/logo.png"
           alt="LESSONS Logo"
-          className="w-10 h-10 rounded-full"
+          className="w-15 h-15 rounded-full"
         />
-        <h3 className="text-xl font-bold tracking-wide">
-          SkillS<span className="text-gray-700">Swap</span>
+        <h3 className="text-3xl font-bold tracking-wide text-pink-500">
+          SkillS<span className="text-purple-600 ">Swap</span>
         </h3>
       </aside>
-
       {/* SERVICES */}
       <nav>
         <h6 className="footer-title">Services</h6>
@@ -23,7 +22,6 @@ const Footer = () => {
         <a className="link link-hover">Marketing</a>
         <a className="link link-hover">Advertisement</a>
       </nav>
-
       {/* COMPANY */}
       <nav>
         <h6 className="footer-title">Company</h6>
@@ -32,7 +30,6 @@ const Footer = () => {
         <a className="link link-hover">Jobs</a>
         <a className="link link-hover">Press kit</a>
       </nav>
-
       {/* SOCIAL */}
       <nav>
         <h6 className="footer-title">Social</h6>
