@@ -67,17 +67,17 @@ const Signup = () => {
   };
   return (
     <div>
-      <div className="hero min-h-screen ">
+      <div className="hero mb-10 ">
         <div className="hero-content flex-col">
-          <h1 className="text-3xl font-bold text-fuchsia-900 mb-4">Sign Up</h1>
+          <h1 className="text-4xl font-bold text-[#001931] ">Sign Up</h1>
 
           <div
             className="card bg-base-100 w-full max-w-sm shadow-2xl hover:bg-purple-50 hover:shadow-[0_10px_30px_rgba(168,85,247,0.25)]
 "
           >
-            <div className="card-body bg-fuchsia-100">
+            <div className="card-body bg-purple-100 rounded-xl">
               <form onSubmit={handleSignup}>
-                <label className="label">Your Name</label>
+                <label className="label mb-0.5">Your Name</label>
                 <input
                   type="text"
                   name="name"
@@ -85,7 +85,7 @@ const Signup = () => {
                   placeholder="Name"
                   autoComplete="name"
                 />
-                <label className="label">Photo URL</label>
+                <label className="label  mt-2 mb-0.5">Photo URL</label>
                 <input
                   type="text"
                   name="photoURL"
@@ -94,7 +94,7 @@ const Signup = () => {
                   autoComplete="photoURL"
                 />
 
-                <label className="label">Email</label>
+                <label className="label  mt-2 mb-0.5">Email</label>
                 <input
                   type="email"
                   name="email"
@@ -103,7 +103,7 @@ const Signup = () => {
                   autoComplete="email"
                 />
 
-                <label className="label mt-2">Password</label>
+                <label className="label mt-2 mb-0.5">Password</label>
                 <div className="relative">
                   <input
                     type={show ? "text" : "password"}
@@ -120,7 +120,7 @@ const Signup = () => {
                   </span>
                 </div>
 
-                <button className="btn btn-neutral mt-6 w-full bg-fuchsia-950 text-white hover:bg-fuchsia-400">
+                <button className="w-full py-2 mt-6 rounded text-white font-semibold bg-gradient-to-r from-purple-600 to-pink-500 shadow hover:scale-101 transform transition">
                   Sign Up
                 </button>
                 {/* Divider */}
@@ -129,7 +129,7 @@ const Signup = () => {
                   <span className="mx-4 text-gray-500 text-sm">OR</span>
                   <div className="flex-grow border-t border-gray-300"></div>
                 </div>
-                <p className="mt-2 text-center">
+                <p className=" text-center ">
                   Already have an account?{" "}
                   <Link to="/signin" className="text-blue-600">
                     Login

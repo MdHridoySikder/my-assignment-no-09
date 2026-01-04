@@ -62,10 +62,10 @@ const Profile = () => {
         </div>
 
         {/* Name & Email */}
-        <h2 className="text-2xl font-bold mt-4 text-gray-800">
+        <h2 className="text-2xl font-bold mt-4 text-[#001931]">
           {user.displayName || "No Name"}
         </h2>
-        <p className="text-gray-500">{user.email}</p>
+        <p className="text-gray-500 mt-2">{user.email}</p>
 
         <p className="mt-3 text-sm text-gray-600">
           Welcome back! Manage your profile below.
@@ -84,7 +84,7 @@ const Profile = () => {
       {showModal && (
         <div className="fixed inset-0 bg-fuchsia-50 bg-opacity-50 flex justify-center items-center z-50 px-4">
           <div className="bg-white w-full max-w-md rounded-2xl p-8 relative shadow-2xl">
-            <h2 className="text-xl font-semibold mb-6 text-gray-800">
+            <h2 className="text-2xl font-bold mb-6 text-[#001931] text-center">
               Update Profile
             </h2>
 

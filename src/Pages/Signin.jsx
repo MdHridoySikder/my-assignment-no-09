@@ -73,20 +73,20 @@ const Signin = () => {
   };
 
   return (
-    <div className="hero min-h-screen bg-blue-50 ">
+    <div className="hero  mb-10 ">
       <div className="hero-content flex-col ">
-        <h1 className="text-3xl font-bold text-fuchsia-900 mb-4">Login</h1>
+        <h1 className="text-4xl font-bold text-[#001931]  mb-">Login</h1>
 
         <div
-          className="card bg-base-100 w-full max-w-sm shadow-2xl hover:bg-purple-50 hover:shadow-[0_10px_30px_rgba(168,85,247,0.25)]
+          className="card bg-base-100 w-full max-w-sm shadow-2xl  hover:shadow-[0_10px_30px_rgba(168,85,247,0.25)]
 "
         >
-          <div className="card-body bg-fuchsia-100">
+          <div className="card-body  rounded-xl bg-purple-100">
             {user ? (
               <Profile user={user} setUser={setUser} />
             ) : (
               <form className="" onSubmit={handleSignin}>
-                <label className="label">Email</label>
+                <label className="label mb-0.5">Email</label>
                 <input
                   type="email"
                   name="email"
@@ -95,7 +95,7 @@ const Signin = () => {
                   placeholder="Email"
                 />
 
-                <label className="label mt-2">Password</label>
+                <label className="label mt-2 mb-0.5">Password</label>
                 <div className="relative">
                   <input
                     type={show ? "text" : "password"}
@@ -114,12 +114,12 @@ const Signin = () => {
                 <button
                   type="button"
                   onClick={handleForgetPassword}
-                  className="mt-2 text-sm text-blue-600 hover:underline"
+                  className="mt-4 text-sm text-blue-600 hover:underline"
                 >
                   Forgot Password?
                 </button>
 
-                <button className="btn w-full mt-4 bg-fuchsia-900 text-white hover:bg-fuchsia-500">
+                <button className="w-full py-2 mt-1 rounded text-white font-semibold bg-gradient-to-r from-purple-600 to-pink-500 shadow hover:scale-101 transform transition">
                   Login
                 </button>
 
@@ -137,7 +137,7 @@ const Signin = () => {
                 <button
                   type="button"
                   onClick={handleGoogleSignIn}
-                  className="btn w-full  bg-fuchsia-900 text-white hover:bg-fuchsia-500"
+                  className="btn w-full  text-white font-semibold bg-gradient-to-r from-purple-600 to-pink-500 shadow hover:scale-101 transform transition"
                 >
                   <svg
                     aria-label="Google logo"
@@ -170,7 +170,7 @@ const Signin = () => {
                   Login with Google
                 </button>
 
-                <p className="mt-3 text-center">
+                <p className="mt-5 text-center ">
                   Don’t have an account?{" "}
                   <Link to="/signup" className="text-blue-600">
                     Sign Up

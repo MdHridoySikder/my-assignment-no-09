@@ -48,16 +48,36 @@ const Navbar = () => {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
           >
             <li>
-              <NavLink to="/home">Home</NavLink>
+              <NavLink
+                to="/home"
+                className={({ isActive }) =>
+                  isActive ? "font-semibold text-pink-500" : "from-purple-600"
+                }
+              >
+                Home
+              </NavLink>
             </li>
+            <li>
+              <NavLink
+                to="/toprated"
+                className={({ isActive }) =>
+                  isActive ? "font-semibold text-pink-500" : "from-purple-600 "
+                }
+              >
+                TopRated
+              </NavLink>
+            </li>
+
             {user && (
               <li>
-                <NavLink to="/profile">My Profile</NavLink>
-              </li>
-            )}
-            {!user && (
-              <li>
-                <NavLink to="/signin">Login</NavLink>
+                <NavLink
+                  to="/profile"
+                  className={({ isActive }) =>
+                    isActive ? "font-semibold text-pink-500" : "from-purple-600"
+                  }
+                >
+                  My Profile
+                </NavLink>
               </li>
             )}
           </ul>

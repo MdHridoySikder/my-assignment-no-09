@@ -48,7 +48,7 @@ const TopRated = () => {
       {/* Top Rated Providers */}
       <section className="mb-20">
         <div className="w-11/12 mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-10">
+          <h2 className="text-3xl md:text-3xl font-bold text-[#001931] mb-10">
             Top Rated Providers
           </h2>
 
@@ -85,7 +85,7 @@ const TopRated = () => {
       {/* How It Works */}
       <section className="bg-white py-16">
         <div className="w-11/12 mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-800 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-center text-[#001931] mb-12">
             How It Works
           </h2>
 
