@@ -62,13 +62,9 @@ const Navbar = () => {
 
         {/* Logo */}
         <a href="/" className="flex items-center gap-1 ml-4">
-          <img
-            src="/public/logo.jpg"
-            alt="Logo"
-            className="w-12 h-12 rounded-full"
-          />
-          <h3 className="font-bold tracking-wide text-[#632EE3]">
-            GUITAR <span className="text-black">LESSONS</span>
+          <img src="/logo.png" alt="Logo" className="w-12 h-12 rounded-full" />
+          <h3 className="font-bold tracking-wide text-[#632EE3] ">
+            SkillS<span className="text-black">Swap</span>
           </h3>
         </a>
       </div>
@@ -117,7 +113,7 @@ const Navbar = () => {
         {!user ? (
           <NavLink
             to="/signin"
-            className="btn btn-sm bg-blue-700 text-white hover:bg-blue-600"
+            className="btn btn-sm bg-gradient-to-r from-purple-600 to-pink-500 mr-10"
           >
             Login
           </NavLink>
@@ -126,7 +122,7 @@ const Navbar = () => {
             {/* Logout Button */}
             <button
               onClick={handleLogout}
-              className="btn btn-sm bg-red-400 text-white hover:bg-red-300"
+              className="btn btn-sm bg-gradient-to-r from-purple-600 to-pink-500"
             >
               Logout
             </button>

@@ -6,12 +6,12 @@ const Footer = () => {
       {/* LEFT : Logo + Brand */}
       <aside className="flex items-center gap-2">
         <img
-          src="/logo.jpg"
+          src="/logo.png"
           alt="LESSONS Logo"
           className="w-10 h-10 rounded-full"
         />
         <h3 className="text-xl font-bold tracking-wide">
-          GUITAR <span className="text-gray-700">LESSONS</span>
+          SkillS<span className="text-gray-700">Swap</span>
         </h3>
       </aside>
 

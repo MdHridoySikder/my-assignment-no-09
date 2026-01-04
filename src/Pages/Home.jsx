@@ -9,7 +9,7 @@ const Home = () => {
     <section className="py-12 bg-gray-50 ">
       <div className="w-11/12 mx-auto ">
         {/* Header */}
-        <div className="flex justify-between items-center mb-8">
+        <div className="flex justify-between items-center mb-5">
           <h2 className="text-3xl font-bold text-gray-800">Popular Skills</h2>
         </div>
 
