@@ -21,6 +21,14 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home></Home>,
+        loader: () => fetch("/MoreData.json").then((res) => res.json()),
+        hydrateFallbackElement: (
+          <h1 className="text-8xl font-bold flex items-center gap-2 hover-3d animate-ping">
+            L
+            <img src="/logo.jpg" alt="Logo" className="w-20 h-20 hover-3d " />
+            OADING
+          </h1>
+        ),
       },
       {
         path: "/Home",
