@@ -12,6 +12,8 @@ import Signup from "./Pages/Signup";
 import { ToastContainer } from "react-toastify";
 import AuthProvaider from "./Context/AuthProvaider";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
+import ViewDetails from "./Pages/ViewDetails";
+import TopRated from "./Pages/TopRated";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +44,17 @@ const router = createBrowserRouter([
           </h1>
         ),
       },
+      {
+        path: "/toprated",
+        element: <TopRated></TopRated>,
+        hydrateFallbackElement: (
+          <h1 className="text-8xl font-bold flex items-center gap-2 hover-3d animate-ping">
+            L
+            <img src="/logo.jpg" alt="Logo" className="w-20 h-20 hover-3d " />
+            OADING
+          </h1>
+        ),
+      },
 
       {
         path: "/profile",
@@ -49,6 +62,29 @@ const router = createBrowserRouter([
           <PrivateRoute>
             <Profile></Profile>
           </PrivateRoute>
+        ),
+        hydrateFallbackElement: (
+          <h1 className="text-8xl font-bold flex items-center gap-2 hover-3d animate-ping">
+            L
+            <img src="/logo.jpg" alt="Logo" className="w-20 h-20 hover-3d " />
+            OADING
+          </h1>
+        ),
+      },
+      {
+        path: "/details/:id",
+        element: (
+          <PrivateRoute>
+            <ViewDetails />
+          </PrivateRoute>
+        ),
+        loader: () => fetch("/MoreData.json").then((res) => res.json()),
+        hydrateFallbackElement: (
+          <h1 className="text-8xl font-bold flex items-center gap-2 hover-3d animate-ping">
+            L
+            <img src="/logo.jpg" alt="Logo" className="w-20 h-20 hover-3d " />
+            OADING
+          </h1>
         ),
       },
       {

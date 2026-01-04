@@ -62,7 +62,11 @@ const Navbar = () => {
 
         {/* Logo */}
         <a href="/" className="flex items-center gap-1 ml-4">
-          <img src="/public/logo.jpg" alt="Logo" className="w-12 h-12" />
+          <img
+            src="/public/logo.jpg"
+            alt="Logo"
+            className="w-12 h-12 rounded-full"
+          />
           <h3 className="font-bold tracking-wide text-[#632EE3]">
             GUITAR <span className="text-black">LESSONS</span>
           </h3>
@@ -82,9 +86,27 @@ const Navbar = () => {
               Home
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/toprated"
+              className={({ isActive }) =>
+                isActive ? "font-semibold text-red-700" : "text-blue-300"
+              }
+            >
+              TopRated
+            </NavLink>
+          </li>
+
           {user && (
             <li>
-              <NavLink to="/profile">My Profile</NavLink>
+              <NavLink
+                to="/profile"
+                className={({ isActive }) =>
+                  isActive ? "font-semibold text-red-700" : "text-blue-300"
+                }
+              >
+                My Profile
+              </NavLink>
             </li>
           )}
         </ul>

@@ -8,7 +8,7 @@
     "rating": 4.8,
     "slotsAvailable": 3,
     "description": "Acoustic guitar classes for complete beginners.",
-    "image": "https://i.postimg.cc/example1.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQUhQxomQmkqy-Lge4cwy_UYs5WeA7UkRk5OA&s",
     "category": "Music"
   },
   {
@@ -20,7 +20,7 @@
     "rating": 4.7,
     "slotsAvailable": 4,
     "description": "Learn piano basics step by step.",
-    "image": "https://i.postimg.cc/example2.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQFDTpxhIofXZaxRqOu3KtvqILDWDFq3HksDQ&s",
     "category": "Music"
   },
   {
@@ -32,7 +32,7 @@
     "rating": 4.6,
     "slotsAvailable": 5,
     "description": "Improve your spoken English skills.",
-    "image": "https://i.postimg.cc/example3.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQVtVaX140ICUvQcsAbwg_CSzLs9y7SMD9Vog&s",
     "category": "Language"
   },
   {
@@ -44,7 +44,7 @@
     "rating": 4.9,
     "slotsAvailable": 2,
     "description": "HTML, CSS and basic JavaScript lessons.",
-    "image": "https://i.postimg.cc/example4.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGV3Z-HeQ_lS427_9xRZ26nFQeZNA4fuF4XQ&s",
     "category": "Programming"
   },
   {
@@ -56,7 +56,7 @@
     "rating": 4.5,
     "slotsAvailable": 3,
     "description": "Introduction to digital marketing strategies.",
-    "image": "https://i.postimg.cc/example5.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKKOb-2EE8Bsaj6U-iWFyqVyJ1v0RmSFajdg&s",
     "category": "Marketing"
   },
   {
@@ -68,7 +68,7 @@
     "rating": 4.7,
     "slotsAvailable": 6,
     "description": "Basic yoga sessions for a healthy lifestyle.",
-    "image": "https://i.postimg.cc/example6.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj6pxPjbHostpqzkmjRhrAtZtfjWU5cb0tkQ&s",
     "category": "Health"
   },
   {
@@ -80,7 +80,7 @@
     "rating": 4.6,
     "slotsAvailable": 4,
     "description": "Learn camera handling and photography basics.",
-    "image": "https://i.postimg.cc/example7.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSncN0xUSswUDed6N77NUqhMS1BUgXe_0aLhQ&s",
     "category": "Photography"
   },
   {
@@ -92,7 +92,7 @@
     "rating": 4.8,
     "slotsAvailable": 5,
     "description": "Simple and tasty cooking lessons for beginners.",
-    "image": "https://i.postimg.cc/example8.png",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQd4O5P7Rf8XkeDLCeT8zz9qQcFWmAYss9mgA&s",
     "category": "Cooking"
   }
 ]
