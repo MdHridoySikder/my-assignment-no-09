@@ -3,7 +3,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="footer sm:footer-horizontal bg-[#001931] text-white text-base-content p-10">
-      {/* LEFT: Logo + Brand */}
+      {/*  Logo + Brand */}
       <aside className="flex items-center gap-2">
         <img
           src="/logo.png"

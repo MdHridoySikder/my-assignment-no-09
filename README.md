@@ -1,16 +1,78 @@
-# React + Vite
+Github Repo Link :
+Live Link :
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Project Name
 
-Currently, two official plugins are available:
+SkillSSwap
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Project Description
 
-## React Compiler
+SkillSwap is an online platform that connects learners with skilled instructors. Users can browse, discover, and book sessions for a wide range of skills across different categories including Music, Language, Programming, Marketing, Health, Photography, Cooking, and more.
+Each skill includes detailed information such as:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Price** The cost of the session
 
-## Expanding the ESLint configuration
+- **Rating:** Average rating given by previous users
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Available Slots: Number of sessions available
+
+- Instructor Details: Name, email, and expertise
+
+- Description: A brief overview of the skill
+
+The platform allows skill providers to showcase their expertise while enabling learners to easily find and learn the skills they are interested in.
+
+### Features
+
+- Browse and search skills by category.
+- View detailed skill information including price, rating, and availability.
+- User authentication (Sign in / Sign up / Logout) with Firebase.
+- Profile management (update name and photo).
+- Popular skill sessions directly from the platform.
+- Responsive design for desktop and mobile devices.
+- Interactive navigation using React Router.
+
+### Technologies Used
+
+- **React** - Frontend framework
+- **React Router** - Page routing
+- **Vite** -Fast development build tool
+- **Tailwind CSS** - Styling and responsive design
+- **Firebase** - Authentication and user management
+- **React Toastify** - Notifications
+- **JSON Data** - Skill data structure
+- **React Icons** - UI icons
+- **Daisy Ui** - Prebuilt Tailwind CSS components
+- **Google fonts** -Custom web fonts
+
+- **Netlify** - Deployment and hosting
+- **GitHub** -Version control and code repository
+- **VS Code** – Code editor for development
+
+## Installation
+
+## Project Structure
+
+/src
+/Component
+
+- Navbar.jsx
+- Footer.jsx
+- HeroSlider.jsx
+- PopularSkills.jsx
+
+  /Context
+
+  - AuthContext.jsx
+
+  /Firebase
+
+  - Firebase.config.js
+    /Pages
+  - Home.jsx
+  - TopRated.jsx
+  - Profile.jsx
+  - ViewDetails.jsx
+
+- RootLayout.jsx
+- App.jsx
