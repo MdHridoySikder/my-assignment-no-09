@@ -1,0 +1,98 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Beginner Guitar Lessons",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Acoustic guitar classes for complete beginners.",
+    "image": "https://i.postimg.cc/example1.png",
+    "category": "Music"
+  },
+  {
+    "skillId": 2,
+    "skillName": "Basic Piano Lessons",
+    "providerName": "Emma Wilson",
+    "providerEmail": "emma@skillswap.com",
+    "price": 25,
+    "rating": 4.7,
+    "slotsAvailable": 4,
+    "description": "Learn piano basics step by step.",
+    "image": "https://i.postimg.cc/example2.png",
+    "category": "Music"
+  },
+  {
+    "skillId": 3,
+    "skillName": "Spoken English Practice",
+    "providerName": "John Smith",
+    "providerEmail": "john@skillswap.com",
+    "price": 15,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Improve your spoken English skills.",
+    "image": "https://i.postimg.cc/example3.png",
+    "category": "Language"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Basic Web Development",
+    "providerName": "Sarah Khan",
+    "providerEmail": "sarah@skillswap.com",
+    "price": 30,
+    "rating": 4.9,
+    "slotsAvailable": 2,
+    "description": "HTML, CSS and basic JavaScript lessons.",
+    "image": "https://i.postimg.cc/example4.png",
+    "category": "Programming"
+  },
+  {
+    "skillId": 5,
+    "skillName": "Digital Marketing Basics",
+    "providerName": "Michael Lee",
+    "providerEmail": "michael@skillswap.com",
+    "price": 28,
+    "rating": 4.5,
+    "slotsAvailable": 3,
+    "description": "Introduction to digital marketing strategies.",
+    "image": "https://i.postimg.cc/example5.png",
+    "category": "Marketing"
+  },
+  {
+    "skillId": 6,
+    "skillName": "Yoga for Beginners",
+    "providerName": "Anita Roy",
+    "providerEmail": "anita@skillswap.com",
+    "price": 18,
+    "rating": 4.7,
+    "slotsAvailable": 6,
+    "description": "Basic yoga sessions for a healthy lifestyle.",
+    "image": "https://i.postimg.cc/example6.png",
+    "category": "Health"
+  },
+  {
+    "skillId": 7,
+    "skillName": "Photography Basics",
+    "providerName": "David Brown",
+    "providerEmail": "david@skillswap.com",
+    "price": 22,
+    "rating": 4.6,
+    "slotsAvailable": 4,
+    "description": "Learn camera handling and photography basics.",
+    "image": "https://i.postimg.cc/example7.png",
+    "category": "Photography"
+  },
+  {
+    "skillId": 8,
+    "skillName": "Beginner Cooking Classes",
+    "providerName": "Linda Gomez",
+    "providerEmail": "linda@skillswap.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 5,
+    "description": "Simple and tasty cooking lessons for beginners.",
+    "image": "https://i.postimg.cc/example8.png",
+    "category": "Cooking"
+  }
+]

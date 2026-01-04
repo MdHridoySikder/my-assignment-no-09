@@ -1,0 +1,50 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Beginner Guitar Lessons",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Acoustic guitar classes for complete beginners.",
+    "image": "https://i.postimg.cc/example1.png",
+    "category": "Music"
+  },
+  {
+    "skillId": 2,
+    "skillName": "Basic Piano Lessons",
+    "providerName": "Emma Wilson",
+    "providerEmail": "emma@skillswap.com",
+    "price": 25,
+    "rating": 4.7,
+    "slotsAvailable": 4,
+    "description": "Learn piano basics step by step.",
+    "image": "https://i.postimg.cc/example2.png",
+    "category": "Music"
+  },
+  {
+    "skillId": 3,
+    "skillName": "Spoken English Practice",
+    "providerName": "John Smith",
+    "providerEmail": "john@skillswap.com",
+    "price": 15,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Improve your spoken English skills.",
+    "image": "https://i.postimg.cc/example3.png",
+    "category": "Language"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Basic Web Development",
+    "providerName": "Sarah Khan",
+    "providerEmail": "sarah@skillswap.com",
+    "price": 30,
+    "rating": 4.9,
+    "slotsAvailable": 2,
+    "description": "HTML, CSS and basic JavaScript lessons.",
+    "image": "https://i.postimg.cc/example4.png",
+    "category": "Programming"
+  }
+]
