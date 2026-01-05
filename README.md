@@ -1,6 +1,6 @@
-# Github Repo Link :
+# Github Repo Link : https://github.com/MdHridoySikder/my-assignment-no-09.git
 
-# Live Link :
+# Live Link : https://my-assignment-no-09.netlify.app/profile
 
 # Project Name
 
