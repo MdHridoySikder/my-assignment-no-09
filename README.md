@@ -1,5 +1,6 @@
-Github Repo Link :
-Live Link :
+# Github Repo Link :
+
+# Live Link :
 
 # Project Name
 
@@ -10,9 +11,9 @@ SkillSSwap
 SkillSwap is an online platform that connects learners with skilled instructors. Users can browse, discover, and book sessions for a wide range of skills across different categories including Music, Language, Programming, Marketing, Health, Photography, Cooking, and more.
 Each skill includes detailed information such as:
 
-- **Price** The cost of the session
+- Price The cost of the session
 
-- **Rating:** Average rating given by previous users
+- Rating: Average rating given by previous users
 
 - Available Slots: Number of sessions available
 
@@ -44,35 +45,48 @@ The platform allows skill providers to showcase their expertise while enabling l
 - **React Icons** - UI icons
 - **Daisy Ui** - Prebuilt Tailwind CSS components
 - **Google fonts** -Custom web fonts
-
 - **Netlify** - Deployment and hosting
 - **GitHub** -Version control and code repository
 - **VS Code** – Code editor for development
 
-## Installation
-
 ## Project Structure
 
-/src
-/Component
+**/src**
+**/Component**
 
 - Navbar.jsx
 - Footer.jsx
 - HeroSlider.jsx
 - PopularSkills.jsx
 
-  /Context
+  **/Context**
 
   - AuthContext.jsx
+  - AuthProvaider.jsx
 
-  /Firebase
+  **/Firebase**
 
   - Firebase.config.js
-    /Pages
-  - Home.jsx
-  - TopRated.jsx
-  - Profile.jsx
-  - ViewDetails.jsx
+
+**/Layout**
 
 - RootLayout.jsx
-- App.jsx
+
+  **/Pages**
+
+- Home.jsx
+- PopularSkills.jsx
+- Profile.jsx
+- Signin.jsx
+- signup.jsx
+- TopRated.jsx
+- ViewDetails.jsx
+
+  **/PrivateRoute**
+
+- PrivateRoute.jsx
+
+## Author
+
+- Name: Md Hridoy Sikder
+- Email: hridoy702345@gmail.com
