@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router";
+import { motion } from "framer-motion";
 
 const PopularSkills = ({ data }) => {
   const { skillName, rating, image, price } = data;
@@ -9,18 +10,23 @@ const PopularSkills = ({ data }) => {
   const emptyStars = 5 - fullStars - (hasHalfStar ? 1 : 0);
 
   return (
-    <div className="rounded-xl overflow-hidden hover:shadow-xl duration-300 flex flex-col border border-gray-200 ">
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="rounded-xl overflow-hidden hover:shadow-xl duration-300 flex flex-col border border-gray-200"
+    >
       <img src={image} alt={skillName} className="w-full h-48 object-cover" />
 
       {/* Card Body */}
-      <div className="p-5 flex flex-col justify-between flex-1 ">
+      <div className="p-5 flex flex-col justify-between flex-1">
         <div>
           <h3 className="text-lg font-semibold text-gray-800 mb-2">
             {skillName}
           </h3>
 
           {/* Rating */}
-          <div className="flex items-center mb-2 ">
+          <div className="flex items-center mb-2">
             <div className="flex text-yellow-400 text-lg">
               {Array(fullStars)
                 .fill()
@@ -49,14 +55,14 @@ const PopularSkills = ({ data }) => {
           </p>
         </div>
 
-        {/* Button stays at bottom */}
+        {/* Button */}
         <Link to={`/details/${data.skillId}`} className="mt-auto">
           <button className="w-full py-2 rounded-xl text-white font-semibold bg-gradient-to-r from-purple-600 to-pink-500 shadow hover:scale-105 transform transition">
             View Details
           </button>
         </Link>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

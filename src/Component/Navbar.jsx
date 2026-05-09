@@ -64,7 +64,7 @@ const Navbar = () => {
                   isActive ? "font-semibold text-pink-500" : "from-purple-600 "
                 }
               >
-                TopRated
+                Top Providers
               </NavLink>
             </li>
 
@@ -107,12 +107,22 @@ const Navbar = () => {
           </li>
           <li>
             <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "font-semibold text-pink-500" : "from-purple-600"
+              }
+            >
+              About Us
+            </NavLink>
+          </li>
+          <li>
+            <NavLink
               to="/toprated"
               className={({ isActive }) =>
                 isActive ? "font-semibold text-pink-500" : "from-purple-600 "
               }
             >
-              TopRated
+              Top Providers
             </NavLink>
           </li>
 

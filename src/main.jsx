@@ -14,6 +14,7 @@ import AuthProvaider from "./Context/AuthProvaider";
 import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import ViewDetails from "./Pages/ViewDetails";
 import TopRated from "./Pages/TopRated";
+import AboutUs from "./Pages/AboutUs";
 
 const router = createBrowserRouter([
   {
@@ -43,6 +44,10 @@ const router = createBrowserRouter([
             OADING
           </h1>
         ),
+      },
+      {
+        path: "/about",
+        element: <AboutUs></AboutUs>,
       },
       {
         path: "/toprated",
@@ -106,5 +111,5 @@ createRoot(document.getElementById("root")).render(
       <RouterProvider router={router} />
       <ToastContainer></ToastContainer>
     </AuthProvaider>
-  </StrictMode>
+  </StrictMode>,
 );

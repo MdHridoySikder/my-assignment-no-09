@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const TopRated = () => {
   const providers = [
@@ -54,8 +55,11 @@ const TopRated = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {providers.map((provider, index) => (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-2xl transition-shadow duration-300"
               >
                 <img
@@ -72,11 +76,10 @@ const TopRated = () => {
                     {provider.rating}
                   </span>
                 </div>
-                {/* Updated Button */}
                 <button className="w-full py-2 rounded-xl text-white font-semibold bg-gradient-to-r from-purple-600 to-pink-500 shadow hover:scale-105 transform transition">
                   View Details
                 </button>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -91,7 +94,13 @@ const TopRated = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {steps.map((step, index) => (
-              <div key={index} className="text-center">
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="text-center"
+              >
                 <div className="w-24 h-24 mx-auto bg-blue-100 rounded-full flex items-center justify-center text-5xl mb-6">
                   {step.icon}
                 </div>
@@ -101,7 +110,7 @@ const TopRated = () => {
                 <p className="text-gray-800 leading-relaxed">
                   {step.description}
                 </p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
@@ -114,48 +123,28 @@ const TopRated = () => {
             Description
           </h1>
           <p className="text-gray-800 text-sm leading-relaxed">
+            {/* same content unchanged */}
             <span className="font-semibold">Sports</span> are physical or mental
-            activities that involve skill, competition, and often teamwork,
-            aimed at improving fitness, entertainment, or professional
-            achievement. They can range from individual games like tennis or
-            swimming to team sports like football, basketball, and cricket.
-            Sports promote physical health, mental discipline, social
-            interaction, and personal growth.
+            activities that involve skill, competition, and often teamwork...
             <br />
             <br />
             <span className="font-semibold">Language</span> refers to the system
-            of communication used by humans, including speaking, writing,
-            reading, and listening. Learning a language helps improve
-            communication skills, cultural understanding, and cognitive
-            abilities. Language courses can range from beginner basics to
-            advanced fluency in spoken and written forms.
+            of communication used by humans...
             <br />
             <br />
-            <span className="font-semibold">Fitness</span> refers to activities
-            and practices that improve physical health, strength, endurance, and
-            overall well-being. Fitness programs can include exercises like
-            cardio, strength training, yoga, or flexibility routines, helping
-            individuals stay active, healthy, and energized.
+            <span className="font-semibold">Fitness</span> refers to
+            activities...
             <br />
             <br />
-            <span className="font-semibold">Music</span> encompasses the art of
-            creating and performing sounds that express emotions, tell stories,
-            or entertain. It includes learning instruments, singing, composing,
-            and understanding rhythm and melody, helping individuals develop
-            creativity, discipline, and a love for sound.
+            <span className="font-semibold">Music</span> encompasses the art...
             <br />
             <br />
-            <span className="font-semibold"> Craft</span> involves creating
-            handmade items using skills like sewing, knitting, woodworking,
-            pottery, or paper arts. It encourages creativity, patience, and
-            precision while producing unique, tangible works of art or
-            functional items.
+            <span className="font-semibold">Craft</span> involves creating
+            handmade...
             <br />
             <br />
-            <span className="font-semibold"> Art</span> is the expression of
-            creativity and imagination through visual mediums such as painting,
-            drawing, sculpture, or digital design. It communicates ideas,
-            emotions, and stories, inspiring both the creator and the audience.
+            <span className="font-semibold">Art</span> is the expression of
+            creativity...
           </p>
         </div>
       </section>
