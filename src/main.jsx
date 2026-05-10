@@ -15,6 +15,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import ViewDetails from "./Pages/ViewDetails";
 import TopRated from "./Pages/TopRated";
 import AboutUs from "./Pages/AboutUs";
+import Blog from "./Pages/Blog";
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
       {
         path: "/about",
         element: <AboutUs></AboutUs>,
+      },
+      {
+        path: "/blog",
+        element: <Blog> </Blog>,
       },
       {
         path: "/toprated",

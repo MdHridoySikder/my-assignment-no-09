@@ -125,7 +125,18 @@ const Navbar = () => {
               Top Providers
             </NavLink>
           </li>
-
+          {user && (
+            <li>
+              <NavLink
+                to="/blog"
+                className={({ isActive }) =>
+                  isActive ? "font-semibold text-pink-500" : "from-purple-600"
+                }
+              >
+                Blog
+              </NavLink>
+            </li>
+          )}
           {user && (
             <li>
               <NavLink
