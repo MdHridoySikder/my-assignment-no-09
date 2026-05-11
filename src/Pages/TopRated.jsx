@@ -117,35 +117,72 @@ const TopRated = () => {
       </section>
 
       {/* Description */}
-      <section>
-        <div className="w-11/12 mx-auto mt-20">
-          <h1 className="text-2xl font-bold mb-5 text-[#001931]">
-            Description
-          </h1>
-          <p className="text-gray-800 text-sm leading-relaxed">
-            {/* same content unchanged */}
-            <span className="font-semibold">Sports</span> are physical or mental
-            activities that involve skill, competition, and often teamwork...
-            <br />
-            <br />
-            <span className="font-semibold">Language</span> refers to the system
-            of communication used by humans...
-            <br />
-            <br />
-            <span className="font-semibold">Fitness</span> refers to
-            activities...
-            <br />
-            <br />
-            <span className="font-semibold">Music</span> encompasses the art...
-            <br />
-            <br />
-            <span className="font-semibold">Craft</span> involves creating
-            handmade...
-            <br />
-            <br />
-            <span className="font-semibold">Art</span> is the expression of
-            creativity...
-          </p>
+      <section className="py-16 bg-gradient-to-b from-white to-purple-50">
+        <div className="w-11/12 mx-auto">
+          {/* Title */}
+          <div className="text-center mb-10">
+            <h1 className="text-3xl md:text-4xl font-bold text-[#001931]">
+              Explore Skill Categories
+            </h1>
+            <p className="text-gray-500 mt-2">
+              Learn different types of skills and grow your potential with
+              SkillSwap
+            </p>
+          </div>
+
+          {/* Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
+              <h2 className="text-xl font-bold text-purple-600 mb-2">Sports</h2>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Physical and mental activities involving skill, teamwork and
+                competition. Sports improve health, discipline and teamwork
+                ability.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
+              <h2 className="text-xl font-bold text-pink-500 mb-2">Language</h2>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                A communication system used by humans to express thoughts, ideas
+                and emotions. Learning languages improves global connection.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
+              <h2 className="text-xl font-bold text-indigo-500 mb-2">
+                Fitness
+              </h2>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Activities that improve physical health, strength and endurance
+                like gym, yoga and running.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
+              <h2 className="text-xl font-bold text-green-500 mb-2">Music</h2>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Art of sound involving rhythm, melody and harmony that expresses
+                emotion.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
+              <h2 className="text-xl font-bold text-yellow-500 mb-2">Craft</h2>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Handmade creative works that show skill, patience and artistic
+                value.
+              </p>
+            </div>
+
+            <div className="bg-white p-6 rounded-2xl shadow hover:shadow-xl transition">
+              <h2 className="text-xl font-bold text-red-500 mb-2">Art</h2>
+              <p className="text-gray-600 text-sm leading-relaxed">
+                Creative expression through drawing, painting and design that
+                reflects imagination.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </div>
