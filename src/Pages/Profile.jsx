@@ -1,135 +1,154 @@
-// Pages/Profile.jsx
 import React, { useContext, useState } from "react";
 import { updateProfile } from "firebase/auth";
-import { toast } from "react-toastify";
 import { AuthContext } from "../Context/AuthContext";
 import { auth } from "../Firebase/Firebase.config";
+import { toast } from "react-toastify";
+import { motion } from "framer-motion";
+import { FaUserEdit, FaEnvelope, FaCamera } from "react-icons/fa";
 
 const Profile = () => {
   const { user, setUser, loading } = useContext(AuthContext);
-  const [showModal, setShowModal] = useState(false);
-  const [name, setName] = useState(user?.displayName || "");
-  const [photoURL, setPhotoURL] = useState(user?.photoURL || "");
 
-  const handleUpdateProfile = async () => {
-    if (!name) {
-      toast.error("Name cannot be empty");
-      return;
-    }
+  const [open, setOpen] = useState(false);
+  const [name, setName] = useState(user?.displayName || "");
+  const [photo, setPhoto] = useState(user?.photoURL || "");
+
+  const handleUpdate = async () => {
+    if (!name) return toast.error("Name required!");
 
     try {
       await updateProfile(auth.currentUser, {
         displayName: name,
-        photoURL,
+        photoURL: photo,
       });
 
-      toast.success("Profile updated successfully!");
       setUser({ ...auth.currentUser });
-      setShowModal(false);
-    } catch (error) {
-      toast.error(error.message);
+      toast.success("Profile updated!");
+      setOpen(false);
+    } catch (err) {
+      toast.error(err.message);
     }
   };
 
   if (loading) {
     return (
-      <p className="text-center mt-20">
+      <div className="h-screen flex items-center justify-center">
         <span className="loading loading-spinner text-primary"></span>
-      </p>
+      </div>
     );
   }
 
   if (!user) {
     return (
-      <p className="text-center mt-20 text-red-500">
-        Please login to view your profile
-      </p>
+      <div className="h-screen flex items-center justify-center text-red-500">
+        Please login to continue
+      </div>
     );
   }
 
   return (
-    <div className="flex justify-center items-center min-h-screen p-4">
-      <div className="bg-white w-full max-w-sm rounded-3xl shadow-2xl p-8 text-center relative hover:shadow-purple-400 transition-shadow">
-        {/* Profile Image */}
-        <div className="relative w-28 h-28 mx-auto">
+    <div className="min-h-screen bg--to-br from-indigo-50 via-purple-50 to-pink-50 flex items-center justify-center p-4">
+      {/* MAIN CARD */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        animate={{ opacity: 1, scale: 1 }}
+        className="w-full max-w-4xl bg-white rounded-3xl shadow-2xl overflow-hidden grid grid-cols-1 md:grid-cols-2"
+      >
+        {/* LEFT SIDE */}
+        <div className="bg-gradient-to-br from-purple-600 to-pink-500 text-white p-10 flex flex-col justify-center items-center text-center">
           <img
             src={user.photoURL || "https://i.ibb.co/2kR9y6F/user.png"}
-            alt="profile"
-            className="w-28 h-28 rounded-full border-4 border-purple-600 shadow-lg object-cover"
+            className="w-32 h-32 rounded-full border-4 border-white object-cover mb-4"
           />
 
-          <span className="absolute -bottom-2 right-0 bg-green-600 w-5 h-5 rounded-full border-2 border-white animate-pulse"></span>
+          <h2 className="text-2xl font-bold">
+            {user.displayName || "No Name"}
+          </h2>
+
+          <p className="flex items-center gap-2 mt-2 text-sm">
+            <FaEnvelope /> {user.email}
+          </p>
+
+          <p className="mt-4 text-sm opacity-80">SkillSwap Member Dashboard</p>
+
+          <button
+            onClick={() => setOpen(true)}
+            className="mt-6 px-6 py-2 bg-white text-purple-600 font-semibold rounded-full hover:scale-105 transition"
+          >
+            <FaUserEdit className="inline mr-2" />
+            Edit Profile
+          </button>
         </div>
 
-        {/* Name & Email */}
-        <h2 className="text-2xl font-bold mt-4 text-[#001931]">
-          {user.displayName || "No Name"}
-        </h2>
-        <p className="text-gray-500 mt-2">{user.email}</p>
+        {/* RIGHT SIDE */}
+        <div className="p-10 space-y-6">
+          <h2 className="text-2xl font-bold">Profile Overview</h2>
 
-        <p className="mt-3 text-sm text-gray-600">
-          Welcome back! Manage your profile below.
-        </p>
+          <div className="space-y-4 text-gray-600">
+            <div className="p-4 bg-gray-50 rounded-xl">
+              <p className="text-sm">Full Name</p>
+              <p className="font-semibold">{user.displayName || "Not set"}</p>
+            </div>
 
-        {/* Update Button */}
-        <button
-          onClick={() => setShowModal(true)}
-          className="mt-6 w-full py-2 rounded-xl bg-gradient-to-r from-purple-600 to-pink-500 text-white font-semibold shadow hover:scale-105 transform transition"
-        >
-          Update Profile
-        </button>
-      </div>
+            <div className="p-4 bg-gray-50 rounded-xl">
+              <p className="text-sm">Email Address</p>
+              <p className="font-semibold">{user.email}</p>
+            </div>
 
-      {/* Modal */}
-      {showModal && (
-        <div className="fixed inset-0 bg-fuchsia-50 bg-opacity-50 flex justify-center items-center z-50 px-4">
-          <div className="bg-white w-full max-w-md rounded-2xl p-8 relative shadow-2xl">
-            <h2 className="text-2xl font-bold mb-6 text-[#001931] text-center">
+            <div className="p-4 bg-gray-50 rounded-xl">
+              <p className="text-sm">Account Status</p>
+              <p className="text-green-600 font-semibold">Active</p>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+
+      {/* MODAL */}
+      {open && (
+        <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
+          <motion.div
+            initial={{ y: 80, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            className="bg-white w-full max-w-md p-6 rounded-2xl shadow-xl"
+          >
+            <h2 className="text-xl font-bold mb-4 text-center">
               Update Profile
             </h2>
 
-            {/* Name */}
-            <div className="mb-4">
-              <label className="label text-gray-700 font-medium">Name</label>
-              <input
-                type="text"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                className="input w-full border-gray-300 focus:border-purple-500 focus:ring focus:ring-purple-200 rounded-lg"
-                placeholder="Enter your name"
-              />
-            </div>
+            <label className="text-sm flex items-center gap-2">
+              <FaUserEdit /> Name
+            </label>
+            <input
+              className="w-full p-3 border rounded-lg mb-3"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
 
-            {/* Photo URL */}
-            <div className="mb-6">
-              <label className="label text-gray-700 font-medium">
-                Photo URL
-              </label>
-              <input
-                type="text"
-                value={photoURL}
-                onChange={(e) => setPhotoURL(e.target.value)}
-                className="input w-full border-gray-300 focus:border-purple-500 focus:ring focus:ring-purple-200 rounded-lg"
-                placeholder="Enter photo URL"
-              />
-            </div>
+            <label className="text-sm flex items-center gap-2">
+              <FaCamera /> Photo URL
+            </label>
+            <input
+              className="w-full p-3 border rounded-lg mb-4"
+              value={photo}
+              onChange={(e) => setPhoto(e.target.value)}
+            />
 
-            {/* Buttons */}
-            <div className="flex justify-end gap-4">
+            <div className="flex gap-3">
               <button
-                onClick={() => setShowModal(false)}
-                className="btn btn-sm bg-gray-200 text-gray-700 hover:bg-gray-300"
+                onClick={() => setOpen(false)}
+                className="w-1/2 bg-gray-200 py-2 rounded-lg"
               >
                 Cancel
               </button>
+
               <button
-                onClick={handleUpdateProfile}
-                className="btn btn-sm text-white bg-purple-600 hover:bg-purple-500"
+                onClick={handleUpdate}
+                className="w-1/2 bg-gradient-to-r from-purple-600 to-pink-500 text-white py-2 rounded-lg"
               >
                 Save
               </button>
             </div>
-          </div>
+          </motion.div>
         </div>
       )}
     </div>
